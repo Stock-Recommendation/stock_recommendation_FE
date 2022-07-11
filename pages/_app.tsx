@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Hydrate } from "react-query/hydration";
 import { Provider } from "react-redux";
 import store from "@redux/store";
+import LayoutGlobal from "../src/components/common/LayoutGlobal";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const apolloClient = initializeApollo();
@@ -17,7 +18,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
           <Provider store={store}>
-            <Component {...pageProps} />
+            <LayoutGlobal>
+              <Component {...pageProps} />
+            </LayoutGlobal>
           </Provider>
         </Hydrate>
       </QueryClientProvider>
