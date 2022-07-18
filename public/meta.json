@@ -1,10 +1,10 @@
 {
-  "name": "tweetstock",
+  "name": "hero-arena-landing-nextjs",
   "plugins": [
     {
-      "name": "Ant Design",
-      "description": "A design system for enterprise-level products. Create an efficient and enjoyable work experience.",
-      "url": "https://ant.design/docs/react/introduce"
+      "name": "React-Bootstrap",
+      "description": "Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit.",
+      "url": "https://getbootstrap.com/docs/5.0/getting-started/introduction/"
     },
     {
       "name": "SASS/SCSS",
@@ -12,59 +12,9 @@
       "url": "https://sass-lang.com/documentation"
     },
     {
-      "name": "Fetch",
-      "description": "Next.js has a built-in polyfill for the fetch API. You don't need to worry about using it on either server or client side.",
-      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-    },
-    {
-      "name": "Axios",
-      "description": "Promise based HTTP client for the browser and node.js.",
-      "url": "https://github.com/axios/axios"
-    },
-    {
-      "name": "Environment Variables",
-      "description": "Use environment variables in your next.js project for server side, client or both.",
-      "url": "https://github.com/vercel/next.js/tree/canary/examples/environment-variables"
-    },
-    {
-      "name": "Apollo GraphQL",
-      "description": "Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.",
-      "url": "https://www.apollographql.com/docs/react/"
-    },
-    {
-      "name": "graphql-request",
-      "description": "Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
-      "url": "https://github.com/prisma-labs/graphql-request"
-    },
-    {
-      "name": "SWR",
-      "description": "React Hooks library for data fetching from Vercel",
-      "url": "https://swr.vercel.app/"
-    },
-    {
-      "name": "React Query",
-      "description": "Hooks for fetching, caching and updating asynchronous data in React.",
-      "url": "https://react-query.tanstack.com/overview"
-    },
-    {
-      "name": "react-use",
-      "description": "A Collection of useful React hooks.",
-      "url": "https://github.com/streamich/react-use"
-    },
-    {
       "name": "React Redux",
       "description": "Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.",
       "url": "https://redux.js.org/introduction/getting-started"
-    },
-    {
-      "name": "Testing Library",
-      "description": "The React Testing Library is a very light-weight solution for testing React components. It provides light utility functions on top of react-dom and react-dom/test-utils.",
-      "url": "https://testing-library.com/docs/"
-    },
-    {
-      "name": "yes",
-      "description": "",
-      "url": ""
     }
   ]
 }

@@ -1,30 +1,19 @@
 import React from "react";
 import { AppProps } from "next/app";
-import "antd/dist/antd.css";
+import "@styles/app.scss";
 import "@styles/global.scss";
-import { initializeApollo } from "@services/graphql";
-import { ApolloProvider } from "@apollo/client";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Hydrate } from "react-query/hydration";
 import { Provider } from "react-redux";
 import store from "@redux/store";
-import LayoutGlobal from "../src/components/common/LayoutGlobal";
+import Head from "next/head";
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  const apolloClient = initializeApollo();
-  const queryClient = new QueryClient();
+function MyApp({ Component, pageProps }: any): JSX.Element {
   return (
-    <ApolloProvider client={apolloClient}>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <Provider store={store}>
-            <LayoutGlobal>
-              <Component {...pageProps} />
-            </LayoutGlobal>
-          </Provider>
-        </Hydrate>
-      </QueryClientProvider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <Head>
+        <title>Hero Arena</title>
+      </Head>
+      <Component {...pageProps} />
+    </Provider>
   );
 }
 

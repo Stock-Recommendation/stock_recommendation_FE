@@ -1,11 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface ICounter {
-  count: number;
-}
-
-const initialState: ICounter = {
+const initialState = {
   count: 20,
+  popupOpen: false,
 };
 
 const counterSlice = createSlice({
@@ -18,9 +15,13 @@ const counterSlice = createSlice({
     decrease: (state) => {
       state.count--;
     },
+    setPopup: (state, action) => {
+      state.popupOpen = action.payload;
+      sessionStorage["popup-flag"] = true;
+    },
   },
 });
 
-export const { increase, decrease } = counterSlice.actions;
+export const { increase, decrease, setPopup } = counterSlice.actions;
 
 export default counterSlice.reducer;
